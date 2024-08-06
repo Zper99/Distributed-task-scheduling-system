@@ -1,0 +1,8 @@
+{
+    "mongoDbURL":"mongodb://43.136.34.221:27017",
+    "etcdEndPoints":["43.136.34.221:2379"],
+    "etcdDialTimeOut":5000,
+    "mongo_connect_timeout":5000,
+    "log_batch_size":20,
+    "random_sleep":100
+}

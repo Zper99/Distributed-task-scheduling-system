@@ -3,10 +3,9 @@ package worker
 import (
 	"Distributed-task-scheduling-system/crontab/common"
 	"context"
+	"math/rand"
 	"os/exec"
 	"time"
-
-	"math/rand"
 )
 
 type Excutor struct {
@@ -58,7 +57,7 @@ func (execute *Excutor) ExectueJob(excuteInfo *common.JobExcuteInfo) (err error)
 		excuteInfo.StartExcuteTime = startTime
 		excuteInfo.EndExcuteRTime = endTime
 		G_scheduler.PushResult(result)
-		time.Sleep(time.Duration(rand.Intn(G_config.RandomSleepTime)+200) * time.Millisecond)
+		time.Sleep(time.Second)
 	}
 	return
 }
